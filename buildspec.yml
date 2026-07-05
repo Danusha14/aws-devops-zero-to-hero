@@ -5,6 +5,8 @@ phases:
     runtime-versions:
       python: 3.11
     commands:
+      - echo "Moving to application directory..."
+      - cd day-14/simple-python-app
       - echo "Installing dependencies..."
       - pip install -r requirements.txt
 
@@ -14,5 +16,6 @@ phases:
       - python app.py
 
 artifacts:
+  base-directory: day-14/simple-python-app
   files:
     - '**/*'
